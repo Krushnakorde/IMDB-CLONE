@@ -52,7 +52,7 @@ searchMovie.addEventListener("input", async function(){
 
     searchInput =searchInput.toLowerCase();
     
-    let item = await fetch(`http://www.omdbapi.com/?t=${searchInput}&apikey=67a6d4ef`)
+    let item = await fetch(`https://www.omdbapi.com/?t=${searchInput}&apikey=67a6d4ef`)
     
     
     item =await item.json();   
@@ -97,7 +97,7 @@ let favArray = [];
 
 
 async function addToFavourite(element){
-    let movie= await fetch(`http://www.omdbapi.com/?i=${element}&apikey=67a6d4ef`);
+    let movie= await fetch(`https://www.omdbapi.com/?i=${element}&apikey=67a6d4ef`);
     movie =await movie.json();
 
     console.log(movie)
@@ -162,7 +162,7 @@ const ElementToShowMovie = document.getElementById("showingInfo")
 ElementToShowMovie.style.display='none';
 async function showMovieInfo(id){
     //getting movies details;
-    const movies = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=67a6d4ef`);
+    const movies = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=67a6d4ef`);
     const movie = await movies.json();
 
     // finding movie from movies Data
